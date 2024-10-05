@@ -1,0 +1,8 @@
+{
+    "builds": [
+      {
+        "src": "mkdocs.yml",
+        "use": "@vercel/python"
+      }
+    ]
+  }
