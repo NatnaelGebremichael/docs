@@ -1,4 +1,5 @@
-site_name: Docs 
+site_name: Docs
+docs_dir: docs 
 site_url: https://docs.natnael.dev
 theme:
   name: material
