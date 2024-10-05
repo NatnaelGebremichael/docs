@@ -6,7 +6,8 @@ theme:
   font:
     text: Merriweather Sans
     code: Red Hat Mono
-  logo: assets/icon.png
+  icon:
+    logo: fontawesome/solid/N
   favicon: assets/icon.ico
   features:
     - navigation.footer
@@ -50,9 +51,7 @@ markdown_extensions:
 
 extra:
   social:
-    - icon: simple/youtube
-      link: https://youtube.com/@james-willett
     - icon: simple/linkedin
-      link: https://linkedin.com/in/willettjames
+      link: https://linkedin.com/in/natnael-gebremichael
 
-copyright: Copyright &copy; 2024 James Willett
+copyright: Copyright &copy; 2024 Natnael Gebremichael
