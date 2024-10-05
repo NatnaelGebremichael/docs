@@ -1,6 +1,6 @@
 ## Reources
-- https://jameswillett.dev/getting-started-with-material-for-mkdocs/#add-line-numbers
-- https://www.youtube.com/watch?v=xlABhbnNrfI&t=0s
+- [getting-started-with-material-for-mkdocs ](https://jameswillett.dev/getting-started-with-material-for-mkdocs/#add-line-numbers)
+- [Youtube](https://www.youtube.com/watch?v=xlABhbnNrfI&t=0s) 
 
 ## Basic setup and Installation Windows (CMD)
 1. Check Python version ```where python``` and ```where python3```
@@ -555,3 +555,58 @@ jobs:
 - Go to GitHub and into settings and change pages to deploy from branch, choose the gh-pages branch.
 - A GitHub Action will trigger that deploys the site
   - For example https://james-willett.github.io/mkdocs-material-tutorial-2024/
+
+## To Deploy to Vercel
+1. Build your site locally:
+Run the following commands in your project root:
+```
+pip install -r requirements.txt
+mkdocs build
+```
+
+This will create a site directory with your built static files.
+
+2. Update your .gitignore file: Remove or comment out any line that ignores the site directory. This ensures that your built files are included in your Git repository.
+
+3. Add and commit the built files:
+```
+git add site
+git commit -m "Add built site files"
+```
+
+4. Update your vercel.json:
+We'll simplify this file to just serve the static files:
+
+```
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "site/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/site/$1"
+    }
+  ]
+}
+```
+
+5. In your Vercel project settings:
+
+ - Go to the Vercel dashboard for your project
+ - Navigate to "Settings" > "General"
+ - Under "Build & Development Settings":
+    - Set the Build Command to: echo "No build required"
+    - Set the Output Directory to: site
+
+6. Commit and push these changes to your GitHub repository:
+```
+git add vercel.json
+git commit -m "Update Vercel configuration for pre-built site"
+git push
+```
+In the Vercel dashboard, go to your project and click "Redeploy" to trigger a new deployment with these changes.

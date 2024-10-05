@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://docs.natnael.dev/Inventory%20Managment/Inventory%20Managment/">
       
       
+        <link rel="prev" href="../../readme/">
       
-      <link rel="icon" href="/assets/icon.ico">
+      
+        <link rel="next" href="../Server%20-%20Inventory%20Managment/">
+      
+      
+      <link rel="icon" href="../../assets/icon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Docs</title>
+        <title>Database Schema - Docs</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#database-schema" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+    <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M21.1 33.9c12.7-4.6 26.9-.7 35.5 9.6L320 359.6V64c0-17.7 14.3-32 32-32s32 14.3 32 32v384c0 13.5-8.4 25.5-21.1 30.1s-26.9.7-35.5-9.6L64 152.4V448c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-13.5 8.4-25.5 21.1-30.1"/></svg>
@@ -99,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Database Schema
             
           </span>
         </div>
@@ -200,7 +211,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Docs" class="md-nav__button md-logo" aria-label="Docs" data-md-component="logo">
+    <a href="../.." title="Docs" class="md-nav__button md-logo" aria-label="Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M21.1 33.9c12.7-4.6 26.9-.7 35.5 9.6L320 359.6V64c0-17.7 14.3-32 32-32s32 14.3 32 32v384c0 13.5-8.4 25.5-21.1 30.1s-26.9.7-35.5-9.6L64 152.4V448c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-13.5 8.4-25.5 21.1-30.1"/></svg>
@@ -218,7 +229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -238,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/readme/" class="md-nav__link">
+      <a href="../../readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -255,17 +266,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -279,7 +292,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Inventory Managment
@@ -290,10 +303,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/Inventory%20Managment/Inventory%20Managment/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -302,6 +324,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -314,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Inventory%20Managment/Server%20-%20Inventory%20Managment/" class="md-nav__link">
+      <a href="../Server%20-%20Inventory%20Managment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -335,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Inventory%20Managment/seeding/" class="md-nav__link">
+      <a href="../seeding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -373,6 +396,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -384,8 +409,158 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="database-schema">Database Schema</h1>
+<pre class="mermaid"><code>erDiagram
+    Organization ||--o{ User : has
+    Organization ||--o{ Product : has
+    Organization ||--o{ Category : has
+    User ||--o{ Sale : makes
+    User ||--o{ Purchase : makes
+    User ||--o{ Expense : records
+    User ||--o{ Employment : has
+    Product ||--o{ Sale : involves
+    Product ||--o{ Purchase : involves
+    Product ||--o{ Waste : involves
+    Category ||--o{ Expense : categorizes
+    Employment ||--o{ Leave : has
+    Purchase }o--|| PurchaseSummary : summarized_in
+    Expense }o--|| ExpenseSummary : summarized_in
+    ExpenseSummary ||--o{ ExpenseByCategory : breaks_down
+
+    Organization {
+        UUID id PK
+        VARCHAR name
+        VARCHAR plan
+    }
+
+    User {
+        UUID id PK
+        UUID organizationId FK
+        VARCHAR name
+        VARCHAR email
+        ENUM role
+    }
+
+    Product {
+        UUID id PK
+        UUID organizationId FK
+        VARCHAR name
+        FLOAT price
+        FLOAT rating
+        INT stockQuantity
+    }
+
+    Category {
+        UUID id PK
+        UUID organizationId FK
+        VARCHAR name
+    }
+
+    Sale {
+        UUID id PK
+        UUID productId FK
+        UUID userId FK
+        TIMESTAMP timestamp
+        INT quantity
+        FLOAT unitPrice
+        FLOAT totalAmount
+    }
+
+    Purchase {
+        UUID id PK
+        UUID productId FK
+        UUID userId FK
+        TIMESTAMP timestamp
+        INT quantity
+        FLOAT unitCost
+        FLOAT totalCost
+        ENUM paymentType
+        TIMESTAMP dueDate
+        BOOLEAN isPaid
+        UUID purchaseSummaryId FK
+    }
+
+    Expense {
+        UUID id PK
+        UUID userId FK
+        UUID categoryId FK
+        FLOAT amount
+        TIMESTAMP timestamp
+        UUID expenseSummaryId FK
+    }
+
+    Waste {
+        UUID id PK
+        UUID productId FK
+        INT quantity
+        VARCHAR reason
+        TIMESTAMP timestamp
+    }
+
+    Employment {
+        UUID id PK
+        UUID userId FK
+        TIMESTAMP startDate
+        VARCHAR contractType
+        VARCHAR[] documents
+    }
+
+    Leave {
+        UUID id PK
+        UUID employmentId FK
+        ENUM type
+        TIMESTAMP startDate
+        TIMESTAMP endDate
+        ENUM status
+    }
+
+    SalesSummary {
+        UUID id PK
+        TIMESTAMP period
+        FLOAT totalSales
+        INT totalQuantity
+        FLOAT averageOrderSize
+        VARCHAR sourceDataHash
+    }
+
+    PurchaseSummary {
+        UUID id PK
+        TIMESTAMP period
+        FLOAT totalPurchases
+        INT totalQuantity
+        FLOAT averageOrderValue
+        VARCHAR sourceDataHash
+    }
+
+    ExpenseSummary {
+        UUID id PK
+        TIMESTAMP period
+        FLOAT totalExpenses
+        VARCHAR sourceDataHash
+    }
+
+    ExpenseByCategory {
+        UUID id PK
+        UUID expenseSummaryId FK
+        UUID categoryId FK
+        FLOAT amount
+    }</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -397,6 +572,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../readme/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Readme">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Readme
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Server%20-%20Inventory%20Managment/" class="md-footer__link md-footer__link--next" aria-label="Next: Server - Docs">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Server - Docs
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -440,10 +653,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.footer"], "search": "/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>
