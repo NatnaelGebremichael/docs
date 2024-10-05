@@ -1,20 +1,21 @@
 {
   "builds": [
     {
+      "src": "requirements.txt",
+      "use": "@vercel/python"
+    },
+    {
       "src": "mkdocs.yml",
-      "use": "@vercel/python",
+      "use": "@vercel/static-build",
       "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
+        "distDir": "site"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/site/$1"
+      "dest": "/$1"
     }
-  ],
-  "buildCommand": "pip install -r requirements.txt && mkdocs build",
-  "outputDirectory": "site"
+  ]
 }
