@@ -1,8 +1,18 @@
-## DB seeding instructions
-``` npx prisma generate ```
-``` npx prisma migrate reset ``` If Db schema already exists
-``` npx prisma migrate dev --name init_new_schema ```
-``` npm run seed ```
+# DB Seeding Instructions
+
+## Prepare your DATABASE_URL
+
+1. Go to https://www.urlencoder.org/
+2. Paste your database password into the encoder
+3. Copy the encoded password
+4. Update your `.env` file with the encoded password in the DATABASE_URL: `DATABASE_URL="postgresql://postgres:<encoded-password>@localhost:5432/inventorymanagment"` Replace `<encoded-password>` with the actual encoded password.
+
+## Seeding Steps
+
+1. Generate Prisma client: `npx prisma generate`
+2. If you're starting fresh or want to reset the database: `npx prisma migrate reset` 
+3. If the database schema already exists and you want to apply new changes: `npx prisma migrate dev --name init_new_schema`
+4. Run the seeding script: `npm run seed`
 
 # Updated Schema Relationships and Logic
 ## Core Entities
