@@ -1,3 +1,4 @@
+# Home
 # Build a Fullstack Inventory Management Dashboard
 
 Starting Tutorial
