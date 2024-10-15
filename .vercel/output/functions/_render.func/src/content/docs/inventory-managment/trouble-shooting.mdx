@@ -1,0 +1,72 @@
+---
+title: Trouble Shooting
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+### SAM AWS-VSCode config trouble shooting
+
+If you're encountering an issue where the sam command is available in CMD but not in the VS Code terminal (Bash). This is likely due to the PATH environment variable not being correctly set in your VS Code Bash environment.
+
+<Steps>
+
+1. `Copytouch ~/.bash_profile` create a .bash_profile file.
+2. `nano ~/.bash_profile` - edit .bash_profile file.
+3. Next - add the following lines into the file
+    ```bash
+        if [ -f ~/.bashrc ]; then # The configuration file.
+            . ~/.bashrc
+        fi
+
+        export PATH=$PATH:"/c/Program Files/Amazon/AWSSAMCLI/bin"
+    ```
+4. Save and exit nano (Ctrl + O, Enter, then Ctrl + X).
+5. Now, let's also edit the .bashrc file to ensure it has the correct content: 
+    `nano ~/.bashrc`
+6. Add this line at the end of the file if it's not already there:
+    ```bash 
+    export PATH=$PATH:"/c/Program Files/Amazon/AWSSAMCLI/bin"
+    ```
+
+7. Save and exit nano (Ctrl + O, Enter, then Ctrl + X).
+8. Now, let's reload both files:
+    ```bash
+    source ~/.bash_profile
+    source ~/.bashrc
+    ```
+9. Try running ```sam --version``` again.
+10. If sam --version still doesn't work, let's try the alias method directly in your current session:
+    ```bash
+    alias sam='"/c/Program Files/Amazon/AWSSAMCLI/bin/sam.cmd"'
+    ```
+11. Then try ```sam --version``` again.
+12. If it works with the alias, we can add this alias to your .bashrc file for future sessions.
+    ```nano ~/.bash_profile```
+13. Add this line at the end of the file if it's not already there:
+    ```bash
+    alias sam='"/c/Program Files/Amazon/AWSSAMCLI/bin/sam.cmd"'
+    ```
+14. Save and exit nano (Ctrl + O, Enter, then Ctrl + X).
+    ```nano ~/.bashrc```
+15. Add this line at the end of the file if it's not already there:
+    ```bash
+    alias sam='"/c/Program Files/Amazon/AWSSAMCLI/bin/sam.cmd"'
+    ```
+16. Save and exit nano (Ctrl + O, Enter, then Ctrl + X).
+17. Now, let's reload both files:
+    ``` bash
+    source ~/.bash_profile
+    source ~/.bashrc
+    ```
+
+</Steps>
+
+If none of these methods work, there might be an issue with the installation of SAM CLI or how Windows is interacting with your Bash environment. In this case, you have a few options:
+
+<Steps>
+
+1. You can use the full path to sam.cmd in your commands. Instead of sam, use `/c/Program Files/Amazon/AWSSAMCLI/bin/sam.cmd`.
+2. You can try reinstalling the SAM CLI, making sure to select the option to add it to your PATH during installation.
+3. You can use the SAM CLI from the Windows Command Prompt or PowerShell, where it seems to be working correctly.
+
+</Steps>
